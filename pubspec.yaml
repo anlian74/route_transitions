@@ -1,6 +1,6 @@
 name: route_transitions_jam
-description: A new Flutter package project.
-version: 0.0.1
+description: Este paquete ayuda al manejo de transicones entre pantallas de forma elegante y fácil.
+version: 0.0.3
 homepage: https://github.com/anlian74/route_transitions
 
 environment:

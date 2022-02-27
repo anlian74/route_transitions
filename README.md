@@ -13,4 +13,15 @@ and the Flutter guide for
 
 # Route Transitions
 
-Hola Mundo
+Este paquete ayuda a la transición de screens.
+
+## Ejemplo de uso
+```
+RouteTransitions(
+    context: context, // BuildContext
+    child: const Screen2(), // Screen Widget
+    animation: AnimationType.fadeIn, /AnimationType
+    duration: const Duration(milliseconds: 300), // Animation duration
+    replacement: true,
+);
+```

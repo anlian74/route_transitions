@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
+/// Tipos de animaciones
 enum AnimationType { normal, fadeIn }
 
+/// Main Class, [context] es el Buildcontext de la aplicación en ese momento
+/// [child] es el widget a navegar
+/// [animation] es el tipo de animación
+/// [duration] duración de la transición
+/// [replacement] determina si la transción es destructiva o no
 class RouteTransitions {
   final BuildContext context;
   final Widget child;
@@ -27,15 +33,20 @@ class RouteTransitions {
     }
   }
 
+  /// Push normal del screen
   void _pushRoute(Route route) => Navigator.push(context, route);
+
+  /// PushReplacement del screen
   void _pushReplacementRoute(Route route) =>
       Navigator.pushReplacement(context, route);
 
+  /// Handler de transición normal
   void _nomalTransition() {
     final route = MaterialPageRoute(builder: (_) => child);
     (replacement) ? _pushReplacementRoute(route) : _pushRoute(route);
   }
 
+  /// Handler de la transición con la animación FadeIn
   void _fadeInTransition() {
     final route = PageRouteBuilder(
       pageBuilder: (_, __, ___) => child,
