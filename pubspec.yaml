@@ -1,7 +1,7 @@
-name: route_transitions
+name: route_transitions_jam
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/anlian74/route_transitions
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
